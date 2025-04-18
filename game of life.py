@@ -48,22 +48,7 @@ def lifegame_step(data):
             new_data[i][j] = lifegame_rule(data[i][j], neighbor)
     
     return new_data
-
-# Hàm chạy trò chơi trong một số bước nhất định
-def lifegame(data, steps):
-    # Tạo mảng 1 chiều có kích thước "steps", mỗi phần tử ghi lại trạng thái của bảng tại một bước.
-    results = ita.array.make1d(steps)
-    # Giá trị đầu tiên của mảng "results" là data ban đầu
-    results[0] = data
     
-    for step in range(1, steps):
-        # Tính các data tại các bước tiếp theo rồi gán vào mảng "results"
-        data = lifegame_step(data)
-        results[step] = data
-    
-    return results
-
-
 # Hàm chạy trò chơi trong một số bước nhất định
 def lifegame(data, steps):
     # Tạo mảng 1 chiều có kích thước "steps", mỗi phần tử ghi lại trạng thái của bảng tại một bước.
